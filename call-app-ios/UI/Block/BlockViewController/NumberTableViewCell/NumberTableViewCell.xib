@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ugh-c2-TnO" customClass="NumberTableViewCell" customModule="call_app_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ugh-c2-TnO" id="5XA-gA-jso">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFS-DX-hgh">
+                        <rect key="frame" x="20" y="11.5" width="369" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcZ-lJ-2xU">
+                        <rect key="frame" x="20" y="43" width="394" height="1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="kor-hb-jNo"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kcZ-lJ-2xU" firstAttribute="leading" secondItem="dFS-DX-hgh" secondAttribute="leading" id="3Bt-oW-Kqj"/>
+                    <constraint firstItem="dFS-DX-hgh" firstAttribute="centerY" secondItem="5XA-gA-jso" secondAttribute="centerY" id="Ba8-NJ-kss"/>
+                    <constraint firstItem="dFS-DX-hgh" firstAttribute="leading" secondItem="5XA-gA-jso" secondAttribute="leading" constant="20" symbolic="YES" id="K6i-tl-bKc"/>
+                    <constraint firstAttribute="trailing" secondItem="kcZ-lJ-2xU" secondAttribute="trailing" id="LEn-C9-Wdb"/>
+                    <constraint firstAttribute="bottom" secondItem="kcZ-lJ-2xU" secondAttribute="bottom" id="Lrt-t7-gwI"/>
+                    <constraint firstAttribute="trailing" secondItem="dFS-DX-hgh" secondAttribute="trailing" constant="25" id="hMS-zM-ks8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="phoneNumberLabel" destination="dFS-DX-hgh" id="Bqd-Sq-LsV"/>
+                <outlet property="separatorView" destination="kcZ-lJ-2xU" id="2A8-Iq-tzr"/>
+            </connections>
+            <point key="canvasLocation" x="156.52173913043478" y="131.91964285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

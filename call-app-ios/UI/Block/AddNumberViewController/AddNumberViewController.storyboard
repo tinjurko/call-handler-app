@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a8m-42-zM4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Number View Controller-->
+        <scene sceneID="ARD-17-50p">
+            <objects>
+                <viewController id="a8m-42-zM4" customClass="AddNumberViewController" customModule="call_app_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aLR-7S-ivO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHt-hO-iqC">
+                                <rect key="frame" x="38" y="139" width="338" height="154"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter phone number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mh1-og-2YU">
+                                        <rect key="frame" x="30" y="30" width="278" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="rl6-4e-zGn">
+                                        <rect key="frame" x="30" y="84" width="278" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsw-89-76A">
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="45"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="touchUpInside:" destination="a8m-42-zM4" eventType="touchUpInside" id="0qT-vn-vJe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dt8-Wp-aij">
+                                                <rect key="frame" x="146.5" y="0.0" width="131.5" height="45"/>
+                                                <state key="normal" title="Add"/>
+                                                <connections>
+                                                    <action selector="touchUpInside:" destination="a8m-42-zM4" eventType="touchUpInside" id="ka7-dx-VYZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="tds-Dx-yEF"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="mh1-og-2YU" firstAttribute="leading" secondItem="QHt-hO-iqC" secondAttribute="leading" constant="30" id="0JF-6V-vuS"/>
+                                    <constraint firstItem="mh1-og-2YU" firstAttribute="top" secondItem="QHt-hO-iqC" secondAttribute="top" constant="30" id="8nB-A7-n80"/>
+                                    <constraint firstAttribute="trailing" secondItem="mh1-og-2YU" secondAttribute="trailing" constant="30" id="T4v-P5-1uz"/>
+                                    <constraint firstItem="rl6-4e-zGn" firstAttribute="trailing" secondItem="mh1-og-2YU" secondAttribute="trailing" id="Yu3-sg-9TR"/>
+                                    <constraint firstAttribute="bottom" secondItem="rl6-4e-zGn" secondAttribute="bottom" constant="25" id="bMU-jB-dGK"/>
+                                    <constraint firstItem="rl6-4e-zGn" firstAttribute="leading" secondItem="mh1-og-2YU" secondAttribute="leading" id="egl-so-2aJ"/>
+                                    <constraint firstItem="rl6-4e-zGn" firstAttribute="top" secondItem="mh1-og-2YU" secondAttribute="bottom" constant="20" id="iWE-aP-4Bt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zX9-nC-Zec"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zX9-nC-Zec" firstAttribute="trailing" secondItem="QHt-hO-iqC" secondAttribute="trailing" constant="38" id="3BR-Zu-euh"/>
+                            <constraint firstItem="QHt-hO-iqC" firstAttribute="top" secondItem="zX9-nC-Zec" secondAttribute="top" constant="95" id="krD-mY-VA4"/>
+                            <constraint firstItem="QHt-hO-iqC" firstAttribute="leading" secondItem="zX9-nC-Zec" secondAttribute="leading" constant="38" id="of3-qC-k7R"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnAdd" destination="dt8-Wp-aij" id="NhB-8h-Wtk"/>
+                        <outlet property="btnCancel" destination="Nsw-89-76A" id="JeX-PF-BWx"/>
+                        <outlet property="containerView" destination="QHt-hO-iqC" id="PEF-Qw-0T1"/>
+                        <outlet property="numberTextField" destination="mh1-og-2YU" id="017-PF-q2D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sTr-nd-SXt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-43.478260869565219" y="105.80357142857143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
